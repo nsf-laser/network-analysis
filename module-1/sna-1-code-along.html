@@ -8,7 +8,7 @@
 <link href="sna-1-code-along_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="sna-1-code-along_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="sna-1-code-along_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.5.54">
 
   <title>Data Structures &amp; Sociograms</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +41,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -424,6 +424,7 @@
 
 <img data-src="img/workflow.png" width="300" class="r-stretch quarto-figure-center"><p class="caption">From Learning Analytics Goes to School <span class="citation" data-cites="krumm2018">(<a href="#/references" role="doc-biblioref" onclick="">Krumm, Means, and Bienkowski 2018</a>)</span></p><aside class="notes">
 <p><strong>Speaker Notes:</strong></p>
+<p>Here are some notes for myself that I will use when I am giving a presentation.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -457,8 +458,7 @@
 <figcaption>Behavioral vs.&nbsp;Cognitive Classroom Friendships <span class="citation" data-cites="pittinsky2008behavioral">(<a href="#/references" role="doc-biblioref" onclick="">Pittinsky and Carolan 2008</a>)</span></figcaption>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-1-2">
 <p>The central question guiding this investigation was:</p>
@@ -523,8 +523,7 @@
 <p>Data Visualization<br>
 <img data-src="img/ggraph.png" width="346"><br>
 <a href="https://ggraph.data-imaginist.com/index.html">ggraph</a></p>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-2-3">
 <p>Load the {tidygraph} and {ggraph} packages.</p>
@@ -560,7 +559,7 @@
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: right;">id</th>
@@ -603,8 +602,7 @@
 </table>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-3-2">
 <div class="columns">
@@ -618,7 +616,7 @@
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: right;">from</th>
@@ -661,8 +659,7 @@
 </table>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-3-3">
 <div class="columns">
@@ -676,7 +673,7 @@
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -764,8 +761,7 @@
 </table>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-3-4">
 <p>Take a look at one of the network datasets in the data folder under the Files Tab in RStudio and consider the following:</p>
@@ -844,18 +840,22 @@
 #
 # A directed simple graph with 2 components
 #
-# A tibble: 27 × 5
-     id gender achievement gender_num achievement_num
-  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;dbl&gt;           &lt;dbl&gt;
-1     1 female high                 1               1
-2     2 male   average              0               2
-3     3 female average              1               2
-4     4 male   high                 0               1
-5     5 female average              1               2
-6     6 female average              1               2
-# ℹ 21 more rows
+# Node Data: 27 × 6 (active)
+      id name      gender achievement gender_num achievement_num
+   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;            &lt;dbl&gt;           &lt;dbl&gt;
+ 1     1 Katherine female high                 1               1
+ 2     2 James     male   average              0               2
+ 3     3 Angela    female average              1               2
+ 4     4 Joseph    male   high                 0               1
+ 5     5 Samantha  female average              1               2
+ 6     6 Susan     female average              1               2
+ 7     7 Anna      female high                 1               1
+ 8     8 Kimberly  female average              1               2
+ 9     9 Helen     female high                 1               1
+10    10 Samuel    male   low                  0               3
+# ℹ 17 more rows
 #
-# A tibble: 203 × 3
+# Edge Data: 203 × 3
    from    to weight
   &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
 1     1     2      1
@@ -903,8 +903,7 @@
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-6-2">
 <div class="columns">
@@ -923,8 +922,7 @@
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-6-3">
 <div class="columns">
@@ -945,8 +943,7 @@
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-6-4">
 <ol type="1">
@@ -991,8 +988,7 @@
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-7-3">
 <div class="columns">
@@ -1013,8 +1009,7 @@
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-7-4">
 <div class="columns">
@@ -1030,8 +1025,7 @@
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-7-5">
 <p>With a fair bit of coding:</p>
@@ -1069,8 +1063,7 @@
 </div>
 </div><div class="column" style="width:80%;">
 <p>This work was supported by the National Science Foundation grants DRL-2025090 and DRL-2321128 (ECR:BCSER). Any opinions, findings, and conclusions expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.</p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
@@ -1371,18 +1364,7 @@ Pittinsky, Matthew, and Brian V Carolan. 2008. <span>“Behavioral Versus Cognit
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1414,7 +1396,47 @@ Pittinsky, Matthew, and Brian V Carolan. 2008. <span>“Behavioral Versus Cognit
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1451,7 +1473,11 @@ Pittinsky, Matthew, and Brian V Carolan. 2008. <span>“Behavioral Versus Cognit
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
